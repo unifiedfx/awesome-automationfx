@@ -10,10 +10,10 @@
             "email": "support@unifiedfx.com"
         }
     },
-    "host": "127.0.0.1:8181",
-    "basePath": "/AutomationFX/api",
+    "host": "api.unifiedfx.com",
+    "basePath": "",
     "schemes": [
-        "http"
+        "https"
     ],
     "consumes": [],
     "produces": [],
