@@ -2443,6 +2443,8 @@
             "description": "Basic Authentication"
         }
     },
-    "security": [],
+    "security": [{
+      "apiKey": []
+    }],
     "tags": []
 }
