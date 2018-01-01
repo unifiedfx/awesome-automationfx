@@ -6,6 +6,7 @@ A curated list of AutomationFX resources for Developers, inspired by [awesome-ci
 
 - [AutomationFX](#automationfx)
 - [REST API](#rest-api)
+- [SDK](#sdk)
 - [Authentication](#authentication)
 - [CUCM Support](#cucm-support)
 - [Cloud Integration](#cloud-integration)
@@ -34,9 +35,16 @@ DISCLAIMER: [UnifiedFX](http://www.unifiedfx.com) does not make any commitments 
 
 *Currently the following CUCM API's are exposed via AutomationFX:*
 
+
 * [AXL](https://developer.cisco.com/site/axl) - Cisco Administrive XML
 * [CTI](https://developer.cisco.com/site/jtapi) - Computer Telephony Integration (JTAPI)
 * [RISPort](https://developer.cisco.com/site/sxml/discover/overview/risport/) - Real-Time Information Port
+
+## SDK
+Software Development Kits (SDK) make it simple to get up and running in a familiar environment. The first SDK for AutomationFX is available in [Python](https://www.python.org/about/gettingstarted/)
+
+* [Python](https://github.com/unifiedfx/automationfx-python) - Python SDK for AutomationFX
+
 
 ## Authentication
 
