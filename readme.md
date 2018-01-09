@@ -73,13 +73,21 @@ Software Development Kits (SDK) make it simple to get up and running in a famili
 *AutomationFX can be deployed to a DMZ location as long as the appropriate services are open. However in order to simplify testing and development AutomationFX has a build in 'Cloud Relay' ([CloudFX](#cloudfx)) that maintains an out-bound connection to a secure relay end-point.*
 
 ### CloudFX
-*CloudFX is similar to facilities like [ngrok](https://ngrok.com), but secured to only allow specific well-formatted requests and DDOS control. The CloudFX relay endpoint (https://api.unifiedfx.com) uses an APIKey to authenticate and route the request to the corresponding on-premise AutomationFX instance. This enabled a multitude of integration options using services like [Zapier](https://zapier.com), [built.io](https://www.built.io), [hook.io](https://hook.io), [IFTTT](https://ifttt.com)*
+*CloudFX is similar to facilities like [ngrok](https://ngrok.com), but secured to only allow specific well-formatted requests and DDOS control. The CloudFX gateway endpoint (https://api.unifiedfx.com) uses an APIKey to authenticate and route the request to the corresponding on-premise AutomationFX instance. This enabled a multitude of integration options using services like [Zapier](https://zapier.com), [built.io](https://www.built.io), [hook.io](https://hook.io), [IFTTT](https://ifttt.com)*
 
 *The following video is a demo of integrating Cisco Spark and CUCM. In this example Zapier is used to integrate with AutomationFX, however any of the above cloud services could be used:*
 
 * [Spark and CUCM integration via AutomationFX and Zapier](https://youtu.be/K0H5xtfyrf4)
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/K0H5xtfyrf4/0.jpg)](https://www.youtube.com/watch?v=K0H5xtfyrf4 "Spark and CUCM integration via AutomationFX and Zapier")
+
+#### CloudFX Gateway
+
+*The CloudFX gateway provides the choice to forward requests sent to the gateway (https://api.unifiedfx.com) via a local Firewall/DMZ or the CloudFX Relay in order to reach the local AutomationFX instance. Each 'App' created within AutomationFX has it's own Apikey, the option to use CloudFX and the choice to set a Relay URL. If a Relay URL is provided the CloudFX gateway will forward requests to that URL, the Relay URL would normally be the scheme/host/port of the firewall inbound connection that forwards requests to the local instance of AutomationFX. If no Relay URL is provided then the gateway defaults to sending the request to your instance of the CloudFX Relay (if enabled). The CloudFX relay is a secured entry point to your local instance of AutomationFX that works using an outbound connection from AutomationFX to the relay. Because this uses an outbound connection there is typically no need to configure any firewall rules, therefore it is perfect for rapid development and testing scenarios.*
+
+**CloudFX Architecture**
+
+![CloudFX Diagram](CloudFX%20Diagram.png)
 
 ## AXL
 
